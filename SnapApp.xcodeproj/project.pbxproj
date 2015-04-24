@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77063EC71AEAA70E004DFBF8 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77063EC61AEAA70E004DFBF8 /* LoggedInViewController.swift */; };
 		7762E8231AE9159D00D8DA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762E8221AE9159D00D8DA97 /* AppDelegate.swift */; };
 		7762E8251AE9159D00D8DA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762E8241AE9159D00D8DA97 /* ViewController.swift */; };
 		7762E8281AE9159D00D8DA97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7762E8261AE9159D00D8DA97 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		77063EC61AEAA70E004DFBF8 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		7762E81D1AE9159D00D8DA97 /* SnapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7762E8211AE9159D00D8DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7762E8221AE9159D00D8DA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				7762E8221AE9159D00D8DA97 /* AppDelegate.swift */,
+				77063EC61AEAA70E004DFBF8 /* LoggedInViewController.swift */,
 				7762E8241AE9159D00D8DA97 /* ViewController.swift */,
 				7762E8261AE9159D00D8DA97 /* Main.storyboard */,
 				7762E8291AE9159D00D8DA97 /* Images.xcassets */,
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77063EC71AEAA70E004DFBF8 /* LoggedInViewController.swift in Sources */,
 				7762E8251AE9159D00D8DA97 /* ViewController.swift in Sources */,
 				7762E8231AE9159D00D8DA97 /* AppDelegate.swift in Sources */,
 			);
@@ -730,6 +734,7 @@
 				7762E83E1AE9159D00D8DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7762E83F1AE9159D00D8DA97 /* Build configuration list for PBXNativeTarget "SnapAppTests" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +743,7 @@
 				7762E8411AE9159D00D8DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7762E8881AE9182800D8DA97 /* Build configuration list for PBXNativeTarget "SnapApp WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +752,7 @@
 				7762E88A1AE9182800D8DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7762E88B1AE9182800D8DA97 /* Build configuration list for PBXNativeTarget "SnapApp WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +761,7 @@
 				7762E88D1AE9182800D8DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -41,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        if let request = userInfo as? [String:String] {
+            if let content = request["content"] {
+                if content == "isLoggedIn" {
+                    if PFUser.currentUser() != nil {
+                        reply(["content": true])
+                    } else {
+                        reply(["content": false])
+                    }
+                }
+            }
+        }
+    }
 
 
 }

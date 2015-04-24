@@ -10,8 +10,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SnapApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Hello World" id="Mkf-U1-Il7"/>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="Please log in  with your iPhone" numberOfLines="2" id="Mkf-U1-Il7"/>
                     </items>
+                    <connections>
+                        <outlet property="logInLabel" destination="Mkf-U1-Il7" id="VTd-3R-BDF"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

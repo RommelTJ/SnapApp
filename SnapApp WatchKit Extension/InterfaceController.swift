@@ -12,10 +12,23 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var logInLabel: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        WKInterfaceController.openParentApplication(["content": "isLoggedIn"], reply: { (reply, error) -> Void in
+            if let response = reply as? [String: Bool] {
+                if let content = response["content"] {
+                    if content == true {
+                        println("User is logged in")
+                    } else {
+                        self.logInLabel.setHidden(false)
+                        self.logInLabel.setText("Not logged in")
+                    }
+                }
+            }
+        })
     }
 
     override func willActivate() {
