@@ -40,6 +40,7 @@
 		7762E8871AE9182800D8DA97 /* SnapApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7762E86B1AE9182800D8DA97 /* SnapApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		779CF8031AEDEED50010434B /* tableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CF8021AEDEED50010434B /* tableInterfaceController.swift */; };
 		779CF8051AEDF0250010434B /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CF8041AEDF0250010434B /* tableRowController.swift */; };
+		779CF8071AEDFC6D0010434B /* messageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CF8061AEDFC6D0010434B /* messageInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		7762E8821AE9182800D8DA97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		779CF8021AEDEED50010434B /* tableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableInterfaceController.swift; sourceTree = "<group>"; };
 		779CF8041AEDF0250010434B /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableRowController.swift; sourceTree = "<group>"; };
+		779CF8061AEDFC6D0010434B /* messageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			children = (
 				7762E8701AE9182800D8DA97 /* InterfaceController.swift */,
 				7762E8721AE9182800D8DA97 /* NotificationController.swift */,
+				779CF8061AEDFC6D0010434B /* messageInterfaceController.swift */,
 				779CF8021AEDEED50010434B /* tableInterfaceController.swift */,
 				779CF8041AEDF0250010434B /* tableRowController.swift */,
 				7762E8741AE9182800D8DA97 /* Images.xcassets */,
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779CF8071AEDFC6D0010434B /* messageInterfaceController.swift in Sources */,
 				7762E8731AE9182800D8DA97 /* NotificationController.swift in Sources */,
 				7762E8711AE9182800D8DA97 /* InterfaceController.swift in Sources */,
 				779CF8031AEDEED50010434B /* tableInterfaceController.swift in Sources */,

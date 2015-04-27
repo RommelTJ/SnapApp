@@ -115,6 +115,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     } else {
                         reply(["content":false])
                     }
+                } else if content == "checkMessages" {
+                    var query = PFQuery(className: "messages")
+                    var username = PFUser.currentUser()?.username
+                    query.whereKey("to", equalTo: username!)
+                    query.limit = 1
+                    query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+                        if error == nil && objects!.count > 0 {
+                            if let message = objects![0] as? PFObject {
+                                if let sender = message["from"] as? String {
+                                    if let messageContent = message["messageContent"] as? String {
+                                        message.deleteInBackgroundWithBlock({ (success, error) -> Void in
+                                            if error == nil {
+                                                if success == true {
+                                                    reply(["sender": sender, "messageContent": messageContent])
+                                                }
+                                            }
+                                        })
+                                    }
+                                }
+                            }
+                        }
+                    })
                 }
             }
         }

@@ -76,6 +76,30 @@
             </objects>
             <point key="canvasLocation" x="432" y="345"/>
         </scene>
+        <!--messageInterfaceController-->
+        <scene sceneID="ndW-a7-aW0">
+            <objects>
+                <controller identifier="messageInterfaceController" id="bKA-cD-Mhu" customClass="messageInterfaceController" customModule="SnapApp_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="nse-hf-4Rs"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="lhw-4l-pU3">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="1" alignment="left" title="Done" id="Kui-86-NYQ">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="xHR-nc-Xx5"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="fromLabel" destination="nse-hf-4Rs" id="dSp-XQ-Pn3"/>
+                        <outlet property="messageContentLabel" destination="lhw-4l-pU3" id="qMF-gh-dG1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="611" y="345"/>
+        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
