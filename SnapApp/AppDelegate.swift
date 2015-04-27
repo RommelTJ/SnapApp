@@ -51,6 +51,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     } else {
                         reply(["content": false])
                     }
+                } else if content == "getMessages" {
+                    let query = PFQuery(className: "phrases")
+                    query.fromLocalDatastore()
+                    var username = PFUser.currentUser()?.username
+                    query.whereKey("username", equalTo: username!)
+                    
+                    query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                        if error == nil && objects!.count > 0 {
+                            if let object = objects![0] as? PFObject {
+                                var messages = [String]()
+                                if let message =  object["phrase1"] as? String {
+                                    messages.append(message)
+                                }
+                                if let message =  object["phrase2"] as? String {
+                                    messages.append(message)
+                                }
+                                if let message =  object["phrase3"] as? String {
+                                    messages.append(message)
+                                }
+                                if let message =  object["phrase4"] as? String {
+                                    messages.append(message)
+                                }
+                                reply(["content": messages])
+                            }
+                        }
+                    }
+                } else if content == "getUsers" {
+                    var query = PFUser.query()
+                    var users = [String]()
+                    var username = PFUser.currentUser()?.username
+                    query?.whereKey("username", notEqualTo: username!)
+                    query?.orderByAscending("username")
+                    query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+                        if error == nil {
+                            for object in objects! {
+                                if let user = object as? PFUser {
+                                    users.append(user.username!)
+                                }
+                            }
+                            reply(["content":users])
+                        } else {
+                            println("Error getting users!")
+                        }
+                    })
+                } else if content == "sendMessage" {
+                    if let messageContent = request["messageContent"] {
+                        if let user = request["user"] {
+                            var message = PFObject(className: "messages")
+                            message["messageContent"] = messageContent
+                            message["to"] = user
+                            message["from"] = PFUser.currentUser()?.username
+                            message.saveInBackgroundWithBlock({ (success, error) -> Void in
+                                if error == nil {
+                                    reply(["content":success])
+                                } else {
+                                    reply(["content":false])
+                                }
+                            })
+                        } else {
+                            reply(["content":false])
+                        }
+                    } else {
+                        reply(["content":false])
+                    }
                 }
             }
         }
